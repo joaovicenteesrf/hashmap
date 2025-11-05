@@ -1,10 +1,9 @@
-package org.example;
+package org.example.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Exercicio0ExemploHashmap {
-
 
     public static void executar() {
         // Declaração do Hashmap
