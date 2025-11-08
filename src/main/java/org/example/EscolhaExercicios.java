@@ -6,6 +6,7 @@ import org.example.hashmap.Exercicio0ExemploHashmap;
 import org.example.hashmap.Exercicio1ContagemPalavras;
 import org.example.hashmap.Exercicio2AgendaTelefonica;
 import org.example.hashmap.Exercicio3RankingAlunos;
+import org.example.streams.Exercicio0ExemploStream;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -23,23 +24,11 @@ public class EscolhaExercicios {
         ExercicioEnum tipoExercicio = ExercicioEnum.fromChoice(escolhaTipo);
 
         if (tipoExercicio.equals(ExercicioEnum.HASHMAP)) {
-            System.out.println("Qual exercício? \n");
-            System.out.println("0 - Exercício zero - Exemplo inicial");
-            System.out.println("1 - Exercício um - Contagem de palavras");
-            System.out.println("2 - Exercício dois - Agenda Telefônica");
-            System.out.println("3 - Exercício 3 - Ranking alunos");
+            executarHashmap();
+        }
 
-            Map<Integer, Runnable> exerciciosHashmap = Map.of(
-                    0, Exercicio0ExemploHashmap::executar,
-                    1, Exercicio1ContagemPalavras::executar,
-                    2, Exercicio2AgendaTelefonica::executar,
-                    3, Exercicio3RankingAlunos::executar
-            );
-
-            int escolhaExercicio = scanner.nextInt();
-            exerciciosHashmap.getOrDefault(escolhaExercicio, () ->
-                    System.out.println("Opção inválida!")
-            ).run();
+        if (tipoExercicio.equals(ExercicioEnum.STREAM)) {
+            executarStream();
         }
 
         System.out.println("\nDeseja executar outro exercício? (s/n)");
@@ -49,5 +38,39 @@ public class EscolhaExercicios {
         } else {
             System.out.println("Encerrando...");
         }
+    }
+
+    private static void executarStream() {
+        System.out.println("Qual exercício? \n");
+        System.out.println("0 - Exercício zero - Exemplo inicial");
+
+        Map<Integer, Runnable> exerciciosHashmap = Map.of(
+                0, Exercicio0ExemploStream::executar
+        );
+
+        int escolhaExercicio = scanner.nextInt();
+        exerciciosHashmap.getOrDefault(escolhaExercicio, () ->
+                System.out.println("Opção inválida!")
+        ).run();
+    }
+
+    private static void executarHashmap() {
+        System.out.println("Qual exercício? \n");
+        System.out.println("0 - Exercício zero - Exemplo inicial");
+        System.out.println("1 - Exercício um - Contagem de palavras");
+        System.out.println("2 - Exercício dois - Agenda Telefônica");
+        System.out.println("3 - Exercício 3 - Ranking alunos");
+
+        Map<Integer, Runnable> exerciciosHashmap = Map.of(
+                0, Exercicio0ExemploHashmap::executar,
+                1, Exercicio1ContagemPalavras::executar,
+                2, Exercicio2AgendaTelefonica::executar,
+                3, Exercicio3RankingAlunos::executar
+        );
+
+        int escolhaExercicio = scanner.nextInt();
+        exerciciosHashmap.getOrDefault(escolhaExercicio, () ->
+                System.out.println("Opção inválida!")
+        ).run();
     }
 }

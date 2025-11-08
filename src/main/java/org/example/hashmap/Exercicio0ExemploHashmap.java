@@ -18,7 +18,6 @@ public class Exercicio0ExemploHashmap {
         notas.put("Bruna", 9.0);
         notas.put("Ana", 7.0);
 
-
         // Resgatando um valor e retornando ao usuário
         System.out.println("Demonstração GET -------------------");
         Double notaAna = notas.get("Ana");
