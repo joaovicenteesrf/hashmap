@@ -75,7 +75,7 @@ public class Exercicio0ExemploHashmap {
         System.out.println("A lista tem " + tamanhoDaLista + " aluno(s) \n");
 
 
-        // Verificando se a lista está vazia
+        // Verificando se a lista está vazia e como limpar a lista inteira
         System.out.println("Demonstração isEmpty e clear -----------");
         while (!notas.isEmpty()) {
             System.out.println("A lista não está vazia! Ela contém " + notas.size() + " aluno(s)");

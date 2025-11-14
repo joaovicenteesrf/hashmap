@@ -2,10 +2,7 @@ package org.example;
 
 import lombok.*;
 import org.example.enums.ExercicioEnum;
-import org.example.hashmap.Exercicio0ExemploHashmap;
-import org.example.hashmap.Exercicio1ContagemPalavras;
-import org.example.hashmap.Exercicio2AgendaTelefonica;
-import org.example.hashmap.Exercicio3RankingAlunos;
+import org.example.hashmap.*;
 import org.example.streams.Exercicio0ExemploStream;
 
 import java.util.Map;
@@ -40,6 +37,7 @@ public class EscolhaExercicios {
         }
     }
 
+    @SneakyThrows
     private static void executarStream() {
         System.out.println("Qual exercício? \n");
         System.out.println("0 - Exercício zero - Exemplo inicial");
@@ -59,13 +57,16 @@ public class EscolhaExercicios {
         System.out.println("0 - Exercício zero - Exemplo inicial");
         System.out.println("1 - Exercício um - Contagem de palavras");
         System.out.println("2 - Exercício dois - Agenda Telefônica");
-        System.out.println("3 - Exercício 3 - Ranking alunos");
+        System.out.println("3 - Exercício três - Ranking alunos");
+        System.out.println("4 - Exercício quatro - Leitura de tags");
+
 
         Map<Integer, Runnable> exerciciosHashmap = Map.of(
                 0, Exercicio0ExemploHashmap::executar,
                 1, Exercicio1ContagemPalavras::executar,
                 2, Exercicio2AgendaTelefonica::executar,
-                3, Exercicio3RankingAlunos::executar
+                3, Exercicio3RankingAlunos::executar,
+                4, Exercicio4LeituraTags::executar
         );
 
         int escolhaExercicio = scanner.nextInt();

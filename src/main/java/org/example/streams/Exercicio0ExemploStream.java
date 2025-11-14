@@ -101,6 +101,8 @@ public class Exercicio0ExemploStream {
                 }
             });
 
+        System.out.println("\n");
+
 
 
         // Exemplo operação terminal Collection: utilizado no lugar de toList() para listas mutáveis
@@ -111,7 +113,7 @@ public class Exercicio0ExemploStream {
                 .collect(Collectors.toList());
 
 
-        System.out.println("Lista original: " + listaNomesMaioresQue3Letras);
+        System.out.println("Lista original: " + nomes);
         listaNomesMaioresQue3Letras.add("Joaquim");
         System.out.println("Lista modificada após o término do stream: " + listaNomesMaioresQue3Letras + "\n");
 
