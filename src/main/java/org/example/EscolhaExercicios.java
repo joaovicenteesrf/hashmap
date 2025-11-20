@@ -3,6 +3,9 @@ package org.example;
 import lombok.*;
 import org.example.enums.ExercicioEnum;
 import org.example.hashmap.*;
+import org.example.lambda.Exercicio1LambdaConsumer;
+import org.example.lambda.Exercicio2LambdaPredicate;
+import org.example.lambda.Exercicio3LambdaFunction;
 import org.example.streams.*;
 
 import java.util.Map;
@@ -16,6 +19,7 @@ public class EscolhaExercicios {
         System.out.println("Qual tipo de exercício? \n");
         System.out.println("1 - " + ExercicioEnum.HASHMAP + "\n");
         System.out.println("2 - " + ExercicioEnum.STREAM + "\n");
+        System.out.println("3 - " + ExercicioEnum.LAMBDA + "\n");
         int escolhaTipo = scanner.nextInt();
 
         ExercicioEnum tipoExercicio = ExercicioEnum.fromChoice(escolhaTipo);
@@ -26,6 +30,10 @@ public class EscolhaExercicios {
 
         if (tipoExercicio.equals(ExercicioEnum.STREAM)) {
             executarStream();
+        }
+
+        if (tipoExercicio.equals(ExercicioEnum.LAMBDA)) {
+            executarLambda();
         }
 
         System.out.println("\nDeseja executar outro exercício? (s/n)");
@@ -77,6 +85,25 @@ public class EscolhaExercicios {
                 2, Exercicio2AgendaTelefonica::executar,
                 3, Exercicio3RankingAlunos::executar,
                 4, Exercicio4LeituraTags::executar
+        );
+
+        int escolhaExercicio = scanner.nextInt();
+        exerciciosHashmap.getOrDefault(escolhaExercicio, () ->
+                System.out.println("Opção inválida!")
+        ).run();
+    }
+
+    private static void executarLambda() {
+        System.out.println("Qual exercício? \n");
+        System.out.println("1 - Consumer");
+        System.out.println("2 - Predicate");
+        System.out.println("3 - Function");
+
+
+        Map<Integer, Runnable> exerciciosHashmap = Map.of(
+                1, Exercicio1LambdaConsumer::executar,
+                2, Exercicio2LambdaPredicate::executar,
+                3, Exercicio3LambdaFunction::executar
         );
 
         int escolhaExercicio = scanner.nextInt();
