@@ -108,6 +108,8 @@ public class Exercicio0ExemploStream {
         // Exemplo operação terminal Collection: utilizado no lugar de toList() para listas mutáveis
         System.out.println("Exemplo collect() -------------");
 
+        // Aqui retornamos Collectors.toList() para criar uma nova lista mutável
+        // O método toList() (Java 16+) cria listas IMUTÁVEIS
         List<String> listaNomesMaioresQue3Letras = nomes.stream()
                 .filter(n -> n.length() > 3)
                 .collect(Collectors.toList());

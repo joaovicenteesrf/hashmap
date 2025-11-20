@@ -3,7 +3,7 @@ package org.example;
 import lombok.*;
 import org.example.enums.ExercicioEnum;
 import org.example.hashmap.*;
-import org.example.streams.Exercicio0ExemploStream;
+import org.example.streams.*;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -40,10 +40,20 @@ public class EscolhaExercicios {
     @SneakyThrows
     private static void executarStream() {
         System.out.println("Qual exercício? \n");
-        System.out.println("0 - Exercício zero - Exemplo inicial");
+        System.out.println("0 - Exemplo inicial");
+        System.out.println("1 - Ordenação de números - FÁCIL");
+        System.out.println("2 - Ordenação de nomes - FÁCIL");
+        System.out.println("3 - Soma dos positivos - FÁCIL");
+        System.out.println("4 - Top 3 notas - FÁCIL");
+        System.out.println("5 - Agrupamento de nomes - MÉDIO");
 
         Map<Integer, Runnable> exerciciosHashmap = Map.of(
-                0, Exercicio0ExemploStream::executar
+                0, Exercicio0ExemploStream::executar,
+                1, Exercicio1StreamOrdenacao::executar,
+                2, Exercicio2StreamNomes::executar,
+                3, Exercicio3StreamSomaPositivos::executar,
+                4, Exercicio4StreamPegarMaioresNotas::executar,
+                5, Exercicio5StreamAgrupamento::executar
         );
 
         int escolhaExercicio = scanner.nextInt();
@@ -54,11 +64,11 @@ public class EscolhaExercicios {
 
     private static void executarHashmap() {
         System.out.println("Qual exercício? \n");
-        System.out.println("0 - Exercício zero - Exemplo inicial");
-        System.out.println("1 - Exercício um - Contagem de palavras");
-        System.out.println("2 - Exercício dois - Agenda Telefônica");
-        System.out.println("3 - Exercício três - Ranking alunos");
-        System.out.println("4 - Exercício quatro - Leitura de tags");
+        System.out.println("0 - Exemplo inicial");
+        System.out.println("1 - Contagem de palavras");
+        System.out.println("2 - Agenda Telefônica");
+        System.out.println("3 - Ranking alunos");
+        System.out.println("4 - Leitura de tags");
 
 
         Map<Integer, Runnable> exerciciosHashmap = Map.of(

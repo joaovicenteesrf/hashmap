@@ -1,0 +1,36 @@
+package org.example.streams;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Exercicio2StreamNomes {
+
+    public static void executar() {
+
+        /*
+        DESAFIO: Receba uma lista de nomes e produza uma nova lista mutável contendo
+        apenas nomes com mais de 4 letras, todos com letras maiúsculas.
+
+        Após terminar a stream, adicionar um novo nome à lista mutável.
+         */
+
+        List<String> nomes = List.of("Ana", "Carla", "Pedro", "João", "Matheus", "Fernando", "Lia", "Bia");
+
+        // Criação da nova lista filtrada
+        List<String> resultado = nomes.stream()
+                // Iterando sobre cada nome da lista e filtrando apenas os com mais de 4 letras
+                .filter(nome -> nome.length() > 4)
+                // Executando sobre cada nome da nova lista a operação String.toUpperCase()
+                .map(String::toUpperCase)
+                // Retornando uma lista MUTÁVEL com Collectors.toList()
+                .collect(Collectors.toList());
+
+        System.out.println("Lista original: " + nomes);
+        System.out.println("Lista filtrada mutável: " + resultado);
+
+        // Adicionando mais um termo à lista mutável
+        resultado.add("JORGE");
+
+        System.out.println("Lista filtrada mutável com mais um resultado: " + resultado);
+    }
+}
