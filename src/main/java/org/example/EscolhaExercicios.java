@@ -6,6 +6,7 @@ import org.example.hashmap.*;
 import org.example.lambda.Exercicio1LambdaConsumer;
 import org.example.lambda.Exercicio2LambdaPredicate;
 import org.example.lambda.Exercicio3LambdaFunction;
+import org.example.lambda.LambdaTeoria;
 import org.example.streams.*;
 
 import java.util.Map;
@@ -97,12 +98,14 @@ public class EscolhaExercicios {
 
     private static void executarLambda() {
         System.out.println("Qual exercício? \n");
+        System.out.println("0 - Teoria");
         System.out.println("1 - Consumer");
         System.out.println("2 - Predicate");
         System.out.println("3 - Function");
 
 
         Map<Integer, Runnable> exerciciosHashmap = Map.of(
+                0, LambdaTeoria::executar,
                 1, Exercicio1LambdaConsumer::executar,
                 2, Exercicio2LambdaPredicate::executar,
                 3, Exercicio3LambdaFunction::executar
