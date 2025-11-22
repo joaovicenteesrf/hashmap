@@ -7,6 +7,12 @@ import java.util.stream.Collectors;
 public class Exercicio6StreamAgrupamento {
 
     public static void executar() {
+        descreverDesafio();
+        resolverDesafio();
+    }
+
+    private static void descreverDesafio() {
+        System.out.println("Descrição do desafio ------------------------------");
 
         String desafio = """
                 DESAFIO: Receba uma lista de nomes e:
@@ -16,6 +22,10 @@ public class Exercicio6StreamAgrupamento {
                 """;
 
         System.out.println(desafio);
+    }
+
+    private static void resolverDesafio() {
+        System.out.println("Resolução do desafio ------------------------------");
 
         List<String> nomes = List.of("Ana", "Alice", "Bruno", "Bia", "Carlos", "Caio", "Davi", "Douglas");
 

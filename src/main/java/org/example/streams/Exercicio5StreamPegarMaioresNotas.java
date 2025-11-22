@@ -6,6 +6,12 @@ import java.util.List;
 public class Exercicio5StreamPegarMaioresNotas {
 
     public static void executar() {
+        descreverDesafio();
+        resolverDesafio();
+    }
+
+    private static void descreverDesafio() {
+        System.out.println("Descrição do desafio ------------------------------");
 
         String desafio = """
                 DESAFIO: Receba uma lista de notas e faça o seguinte:
@@ -16,6 +22,10 @@ public class Exercicio5StreamPegarMaioresNotas {
                 """;
 
         System.out.println(desafio);
+    }
+
+    private static void resolverDesafio() {
+        System.out.println("Resolução do desafio ------------------------------");
 
         List<Integer> notas = List.of(7, 10, 10, 6, 8, 9, 8);
 
@@ -27,6 +37,5 @@ public class Exercicio5StreamPegarMaioresNotas {
 
         System.out.println("Lista de notas completa: " + notas);
         System.out.println("Top 3 notas: " + top3);
-
     }
 }

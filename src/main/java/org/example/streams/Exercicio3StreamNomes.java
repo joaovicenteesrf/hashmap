@@ -6,6 +6,12 @@ import java.util.stream.Collectors;
 public class Exercicio3StreamNomes {
 
     public static void executar() {
+        descreverDesafio();
+        resolverDesafio();
+    }
+
+    private static void descreverDesafio() {
+        System.out.println("Descrição do desafio ------------------------------");
 
         String desafio = """
                 DESAFIO: Receba uma lista de nomes e produza uma nova lista mutável contendo
@@ -15,6 +21,10 @@ public class Exercicio3StreamNomes {
                 """;
 
         System.out.println(desafio);
+    }
+
+    private static void resolverDesafio() {
+        System.out.println("Resolução do desafio ------------------------------");
 
         List<String> nomes = List.of("Ana", "Carla", "Pedro", "João", "Matheus", "Fernando", "Lia", "Bia");
 

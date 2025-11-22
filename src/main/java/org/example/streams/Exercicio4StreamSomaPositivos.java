@@ -5,6 +5,12 @@ import java.util.List;
 public class Exercicio4StreamSomaPositivos {
 
     public static void executar() {
+        descreverDesafio();
+        resolverDesafio();
+    }
+
+    private static void descreverDesafio() {
+        System.out.println("Descrição do desafio ------------------------------");
 
         String desafio = """
                 DESAFIO: Dada uma lista de números inteiros positivos e negativos, filtre
@@ -12,6 +18,10 @@ public class Exercicio4StreamSomaPositivos {
                 """;
 
         System.out.println(desafio);
+    }
+
+    private static void resolverDesafio() {
+        System.out.println("Resolução do desafio ------------------------------");
 
         List<Integer> numeros = List.of(-3, 5, 9, 0, 10, -4, 7);
 
@@ -24,6 +34,5 @@ public class Exercicio4StreamSomaPositivos {
 
         System.out.println("Lista original: " + numeros);
         System.out.println("Soma dos números positivos: " + somaPositivos);
-
     }
 }

@@ -5,6 +5,12 @@ import java.util.List;
 public class Exercicio2StreamOrdenacao {
 
     public static void executar() {
+        descreverDesafio();
+        resolverDesafio();
+    }
+
+    private static void descreverDesafio() {
+        System.out.println("Descrição do desafio ------------------------------");
 
         String desafio = """
             
@@ -16,6 +22,10 @@ public class Exercicio2StreamOrdenacao {
                 """;
 
         System.out.println(desafio);
+    }
+
+    private static void resolverDesafio() {
+        System.out.println("Resolução do desafio ------------------------------");
 
         // Lista recebida
         List<Integer> numeros = List.of(3, 10, 7, 4, 9, 2, 29, 85, 100, 83, 3, 19, 10, 10, 5);
@@ -34,6 +44,5 @@ public class Exercicio2StreamOrdenacao {
 
         System.out.println("Lista original: " + numeros + "\n");
         System.out.println("Lista dos números ímpares ordenados sem duplicados: " + imparesOrdenados);
-
     }
 }
