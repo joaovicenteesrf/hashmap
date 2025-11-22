@@ -1,16 +1,17 @@
 package org.example.streams;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class Exercicio3StreamSomaPositivos {
+public class Exercicio4StreamSomaPositivos {
 
     public static void executar() {
 
-        /*
-        DESAFIO: Dada uma lista de números inteiros positivos e negativos, filtre
-        apenas os positivos e retorne a soma total deles.
-         */
+        String desafio = """
+                DESAFIO: Dada uma lista de números inteiros positivos e negativos, filtre
+                apenas os positivos e retorne a soma total deles.
+                """;
+
+        System.out.println(desafio);
 
         List<Integer> numeros = List.of(-3, 5, 9, 0, 10, -4, 7);
 

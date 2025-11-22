@@ -1,21 +1,21 @@
 package org.example.streams;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
-public class Exercicio1StreamOrdenacao {
+public class Exercicio2StreamOrdenacao {
 
     public static void executar() {
 
-        /*
-        DESAFIO: Receba uma lista de 15 números aleatórios e:
+        String desafio = """
+            
+                DESAFIO: Receba uma lista de 15 números aleatórios e:
+                        1 - Remova as duplicatas
+                        2 - Filtre apenas os ímpares
+                        3 - Organize-os de forma crescente
+                        4 - Retorne o resultado em uma lista IMUTÁVEL
+                """;
 
-        1 - Remova as duplicatas
-        2 - Filtre apenas os ímpares
-        3 - Organize-os de forma crescente
-        4 - Retorne o resultado em uma lista IMUTÁVEL
-         */
+        System.out.println(desafio);
 
         // Lista recebida
         List<Integer> numeros = List.of(3, 10, 7, 4, 9, 2, 29, 85, 100, 83, 3, 19, 10, 10, 5);

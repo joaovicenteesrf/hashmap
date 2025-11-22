@@ -3,16 +3,18 @@ package org.example.streams;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Exercicio2StreamNomes {
+public class Exercicio3StreamNomes {
 
     public static void executar() {
 
-        /*
-        DESAFIO: Receba uma lista de nomes e produza uma nova lista mutável contendo
-        apenas nomes com mais de 4 letras, todos com letras maiúsculas.
+        String desafio = """
+                DESAFIO: Receba uma lista de nomes e produza uma nova lista mutável contendo
+                apenas nomes com mais de 4 letras, todos com letras maiúsculas.
+                
+                Após terminar a stream, adicionar um novo nome à lista mutável.
+                """;
 
-        Após terminar a stream, adicionar um novo nome à lista mutável.
-         */
+        System.out.println(desafio);
 
         List<String> nomes = List.of("Ana", "Carla", "Pedro", "João", "Matheus", "Fernando", "Lia", "Bia");
 

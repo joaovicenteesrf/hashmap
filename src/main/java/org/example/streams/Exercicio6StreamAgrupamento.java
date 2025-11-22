@@ -1,21 +1,21 @@
 package org.example.streams;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Exercicio5StreamAgrupamento {
+public class Exercicio6StreamAgrupamento {
 
     public static void executar() {
 
-        /*
-        DESAFIO: Receba uma lista de nomes e
+        String desafio = """
+                DESAFIO: Receba uma lista de nomes e:
+                    Agrupe-os por letra inicial e gere um Map<Character, List<String>> onde:
+                    - A chave é a primeira letra do nome
+                    - O valor é a lista de nomes que começam com essa letra, ordenados alfabeticamente
+                """;
 
-        1 - Agrupe-os por letra inicial e gere um Map<Character, List<String>> onde:
-        - A chave é a primeira letra do nome
-        - O valor é a lista de nomes que começam com essa letra, ordenados alfabeticamente
-         */
+        System.out.println(desafio);
 
         List<String> nomes = List.of("Ana", "Alice", "Bruno", "Bia", "Carlos", "Caio", "Davi", "Douglas");
 

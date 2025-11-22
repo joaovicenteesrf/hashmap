@@ -1,14 +1,12 @@
 package org.example.streams;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class Exercicio0ExemploStream {
+public class Exercicio1ExemploStream {
 
     // Classe com exemplos dos principais métodos do Stream
-
 
     public static void executar() {
         // Declarando uma nova lista de números inteiros

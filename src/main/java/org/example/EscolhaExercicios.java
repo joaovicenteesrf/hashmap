@@ -48,20 +48,22 @@ public class EscolhaExercicios {
     @SneakyThrows
     private static void executarStream() {
         System.out.println("Qual exercício? \n");
-        System.out.println("0 - Exemplo inicial");
-        System.out.println("1 - Ordenação de números - FÁCIL");
-        System.out.println("2 - Ordenação de nomes - FÁCIL");
-        System.out.println("3 - Soma dos positivos - FÁCIL");
-        System.out.println("4 - Top 3 notas - FÁCIL");
-        System.out.println("5 - Agrupamento de nomes - MÉDIO");
+        System.out.println("0 - Teoria");
+        System.out.println("1 - Exemplo inicial");
+        System.out.println("2 - Ordenação de números - FÁCIL");
+        System.out.println("3 - Ordenação de nomes - FÁCIL");
+        System.out.println("4 - Soma dos positivos - FÁCIL");
+        System.out.println("5 - Top 3 notas - FÁCIL");
+        System.out.println("6 - Agrupamento de nomes - MÉDIO");
 
         Map<Integer, Runnable> exerciciosHashmap = Map.of(
-                0, Exercicio0ExemploStream::executar,
-                1, Exercicio1StreamOrdenacao::executar,
-                2, Exercicio2StreamNomes::executar,
-                3, Exercicio3StreamSomaPositivos::executar,
-                4, Exercicio4StreamPegarMaioresNotas::executar,
-                5, Exercicio5StreamAgrupamento::executar
+                0, StreamTeoria::executar,
+                1, Exercicio1ExemploStream::executar,
+                2, Exercicio2StreamOrdenacao::executar,
+                3, Exercicio3StreamNomes::executar,
+                4, Exercicio4StreamSomaPositivos::executar,
+                5, Exercicio5StreamPegarMaioresNotas::executar,
+                6, Exercicio6StreamAgrupamento::executar
         );
 
         int escolhaExercicio = scanner.nextInt();
