@@ -1,4 +1,4 @@
-package org.example.lambda;
+package org.fundamentals.lambda;
 
 public class LambdaTeoria {
 

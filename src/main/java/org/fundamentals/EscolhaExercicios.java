@@ -1,13 +1,13 @@
-package org.example;
+package org.fundamentals;
 
 import lombok.*;
-import org.example.enums.ExercicioEnum;
-import org.example.hashmap.*;
-import org.example.lambda.Exercicio1LambdaConsumer;
-import org.example.lambda.Exercicio2LambdaPredicate;
-import org.example.lambda.Exercicio3LambdaFunction;
-import org.example.lambda.LambdaTeoria;
-import org.example.streams.*;
+import org.fundamentals.enums.ExercicioEnum;
+import org.fundamentals.hashmap.*;
+import org.fundamentals.lambda.Exercicio1LambdaConsumer;
+import org.fundamentals.lambda.Exercicio2LambdaPredicate;
+import org.fundamentals.lambda.Exercicio3LambdaFunction;
+import org.fundamentals.lambda.LambdaTeoria;
+import org.fundamentals.streams.*;
 
 import java.util.Map;
 import java.util.Scanner;

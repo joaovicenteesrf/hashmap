@@ -1,4 +1,4 @@
-package org.example.hashmap;
+package org.fundamentals.hashmap;
 
 import java.util.Arrays;
 import java.util.HashSet;

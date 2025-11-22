@@ -1,4 +1,4 @@
-package org.example.enums;
+package org.fundamentals.enums;
 
 public enum ExercicioEnum {
     HASHMAP,
