@@ -17,7 +17,7 @@ Cada módulo traz um conjunto de exercícios temáticos com código, explicaçõ
 ### Pré-requisitos
 - **Java 17+**
 - **IntelliJ IDEA** (ou qualquer IDE de sua preferência)
-- **Maven** configurado (caso o projeto use dependências como Lombok)
+- **Maven** configurado
 
 ### Passos
 1. Clone o repositório:
